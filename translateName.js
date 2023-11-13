@@ -27,6 +27,7 @@ function translateUnitName(aUnitName)
         case "centimeter": return "cm";
         case "millimeter": return "mm";
         case "nautical mile": return "nm";
+        case "light year": return "lightyear";
 
         case "fluid dram": return "fluiddram";
         case "fluid ounce": return "fluidounce";
@@ -83,7 +84,7 @@ function getPlural(aUnitName)
     else if (aUnitName.includes("water")) plural = aUnitName;
     else if (aUnitName.includes("mercury")) plural = aUnitName;
 
-    else if (aUnitName.includes("light")) plural = "c";
+    else if (aUnitName.includes("speed of light")) plural = "c";
     else if (aUnitName.includes("per")) plural = aUnitName;
 
     else if ((aUnitName === "bits") || (aUnitName === "bytes")) plural = aUnitName;
