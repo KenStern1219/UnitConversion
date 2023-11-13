@@ -41,7 +41,9 @@ document.addEventListener("DOMContentLoaded", function ()
     math.createUnit('c', '299792458 m/s');
     math.createUnit('knot', '0.51444444 m/s');
 
-    const lengthUnits = ["meter", "centimeter", "millimeter", "inch", "feet", "yard", "mile", "link", "rod", "chain", "angstrom", "mil", "furlong", "fathom", "league", "nautical mile"];
+    math.createUnit("lightyear", "9.4605284e15 meter");
+
+    const lengthUnits = ["meter", "centimeter", "millimeter", "inch", "feet", "yard", "mile", "link", "rod", "chain", "angstrom", "mil", "furlong", "fathom", "league", "nautical mile", "light year"];
     setUpButton(lengthButton, lengthUnits);
 
     function resetButtonBackground()
