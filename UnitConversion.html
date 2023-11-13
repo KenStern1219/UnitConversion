@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unit Conversion</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Get access to the math.js library -->
+        <script src="math.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Unit Conversion App</h1>
+        </header>
+        <main>
+            <div class="selector">
+                <button id="liquidVolume" class="selectorBtn">LiquidVol</button>
+                <button id="angles" class="selectorBtn">Angles</button>
+                <button id="temperature" class="selectorBtn">Temp</button>
+                <button id="force" class="selectorBtn">Force</button>
+                <button id="energy" class="selectorBtn">Energy</button>
+                <button id="power" class="selectorBtn">Power</button>
+                <button id="binary" class="selectorBtn">Binary</button>
+            </div>
+            
+            <div class="selector">
+                <button id="length" class="selectorBtn">Length</button>
+                <button id="area" class="selectorBtn">Area</button>
+                <button id="volume" class="selectorBtn">Volume</button>
+                <button id="time" class="selectorBtn">Time</button>
+                <button id="mass" class="selectorBtn">Mass</button>
+                <button id="pressure" class="selectorBtn">Pressure</button>
+                <button id="velocity" class="selectorBtn">Velocity</button>
+            </div>
+
+            <div class="converter">
+                <span>Convert: </span>
+                <input type="number" id="inputValue" value=1>
+                <select id="fromUnit">
+                    <!-- Add your unit options here -->
+                </select>
+                <span>to</span>
+                <select id="toUnit">
+                    <!-- Add your unit options here -->
+                </select>
+                <button id="convertButton">Convert</button>
+            </div>
+
+            <div class="result">
+                <p id="resultValue">Result: <input type="text" id="resultValue"></p>
+            </div>
+        </main>
+        <script src = "translateName.js"></script>
+        <script src = "convert.js"></script>
+        <script src = "script.js"></script>
+    </body>
+
+</html>
+

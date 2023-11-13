@@ -1,0 +1,56 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1
+{
+    color: blue;
+    margin-bottom: 75
+    px;
+    font-size: 50px;
+}
+
+#inputValue
+{
+    background-color: aqua;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#fromUnit
+{
+    margin-right: 5px;
+}
+
+#toUnit
+{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#convertButton
+{
+    padding: 4px;    
+    background-color: gold;
+    border-radius: 10px;
+    min-width: 80px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.selectorBtn
+{
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 15px;
+    min-width: 80px;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 10px;
+}
