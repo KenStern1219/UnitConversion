@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function ()
     binaryButton.addEventListener("click", () =>
     {
         console.log("Binary Button Clicked\n\n");
-        const units = ["bits", "bytes"];
+        const units = ["NA"];
         setUpButton(binaryButton, units);
     });
 
@@ -199,6 +199,15 @@ document.addEventListener("DOMContentLoaded", function ()
     
     convertButton.addEventListener("click", function () 
     {
+        //
+        // Haven't implemented the BINARY button yet
+        //
+        if (fromUnit.value === "NA")
+        {
+            resultValue.textContent = "Result: Not Implemented";
+            return
+        }
+
         const input = parseFloat(inputValue.value);
         const from = fromUnit.value;
         const to = toUnit.value;
