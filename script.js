@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function ()
     powerButton.addEventListener("click", () =>
     {
         console.log("Power Button Clicked\n\n");
-        const units = ["watt", "hp"];
+        const units = ["watt", "hp", "kilowatt", "gigawatt", "decibel milliwatts", "BTU/hr", "calories per second"];
         setUpButton(powerButton, units);
     });
 
