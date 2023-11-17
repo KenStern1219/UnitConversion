@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function ()
     math.createUnit('c', '299792458 m/s');
     math.createUnit('knot', '0.51444444 m/s');
 
+    math.createUnit("cps", "4.16667 watt");
+    math.createUnit("dBm", "0.03333 watt");
+
     math.createUnit("lightyear", "9.4605284e15 meter");
 
     const lengthUnits = ["meter", "centimeter", "millimeter", "inch", "feet", "yard", "mile", "link", "rod", "chain", "angstrom", "mil", "furlong", "fathom", "league", "nautical mile", "light year"];
@@ -128,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function ()
     powerButton.addEventListener("click", () =>
     {
         console.log("Power Button Clicked\n\n");
-        const units = ["watt", "hp", "kilowatt", "gigawatt", "decibel milliwatts", "BTU/hr", "calories per second"];
+        const units = ["watt", "hp", "kilowatt", "gigawatt", "decibel milliwatt", "BTU/hr", "calories per second"];
         setUpButton(powerButton, units);
     });
 

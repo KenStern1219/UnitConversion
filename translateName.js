@@ -41,6 +41,9 @@ function translateUnitName(aUnitName)
 
         case "watt-hour": return "Wh";
 
+        case "decibel milliwatt": return "dBm";
+        case "calories per second": return "cps";
+
         case "pascal": return "Pa";
         case "atmosphere": return "atm";
         case "mm mercury": return "mmHg";
@@ -86,6 +89,8 @@ function getPlural(aUnitName)
 
     else if (aUnitName.includes("speed of light")) plural = "c";
     else if (aUnitName.includes("per")) plural = aUnitName;
+
+    else if (aUnitName === "BTU/hr") plural = aUnitName;
 
     else if ((aUnitName === "bits") || (aUnitName === "bytes")) plural = aUnitName;
 
