@@ -166,7 +166,8 @@ document.addEventListener("DOMContentLoaded", function ()
     function setUpButton(aButton, aUnitsArray)
     {
         //
-        // Highlight the selected button
+        // Set all the buttons back to light blue, 
+        // then highlight the selected button in green
         //
         resetButtonBackground();
         aButton.style.backgroundColor = "green";
