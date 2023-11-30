@@ -24,6 +24,11 @@ document.addEventListener("DOMContentLoaded", function ()
     const pressureButton = document.getElementById("pressure");
     const velocityButton = document.getElementById("velocity");
 
+    const modal = document.querySelector(".modal");
+    const overlay = document.querySelector(".overlay");
+    const openModalBtn = document.querySelector(".btn-open");
+    const closeModalBtn = document.querySelector(".btn-close");
+
     const buttons = [lengthButton, areaButton, volumeButton, massButton, timeButton,
                      liquidVolumeButton, anglesButton, tempButton, forceButton, energyButton, powerButton, 
                      binaryButton, pressureButton, velocityButton];
@@ -135,12 +140,55 @@ document.addEventListener("DOMContentLoaded", function ()
         setUpButton(powerButton, units);
     });
 
+    //
+    // The Binary button opens a modal dialog to
+    // allow entry of the binary, decimal, octal,
+    // or hex number
+    //
     binaryButton.addEventListener("click", () =>
     {
         console.log("Binary Button Clicked\n\n");
         const units = ["NA"];
         setUpButton(binaryButton, units);
+        openModal();
     });
+
+    const openModal = function ()
+    {
+        modal.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+    };
+
+    //
+    // Close the modal dialog if the user presses
+    // the "close" button (an 'x'), or clicks outside
+    // of the dialog, or presses the escape key
+    //
+    closeModalBtn.addEventListener("click", () =>
+    {
+        console.log("Close Modal BUtton Clicked\n\n");
+        closeModal();
+    });
+
+    overlay.addEventListener("click", () =>
+    {
+        console.log("Overlay Clicked\n\n");
+        closeModal();
+    });
+
+    document.addEventListener("keydown", function (e)
+    {
+        if (e.key === "Escape" && !modal.classList.contains("hidden"))
+        {
+            closeModal();
+        }
+    });
+
+    const closeModal = function ()
+    {
+        modal.classList.add("hidden");
+        overlay.classList.add("hidden");
+    };
 
    timeButton.addEventListener("click", () =>
     {
