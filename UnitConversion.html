@@ -40,11 +40,11 @@
                 <span>Convert: </span>
                 <input type="number" id="inputValue" value=1>
                 <select id="fromUnit">
-                    <!-- Add your unit options here -->
+                    <!-- Options added dynamically in the javascript -->
                 </select>
                 <span>to</span>
                 <select id="toUnit">
-                    <!-- Add your unit options here -->
+                    <!-- Options added dynamically in the javascript -->
                 </select>
                 <button id="convertButton">Convert</button>
             </div>
@@ -53,19 +53,20 @@
                 <p id="resultValue">Result: <input type="text" id="resultValue"></p>
             </div>
 
+            <!-- the following section if for the modal dialog opened by the Binary button -->
             <section class="modal hidden">
                 <div class="flex">
                     <button class="btn-close">⨉</button>
                 </div>
                 <div>
-                    <h3>Stay in touch</h3>
+                    <h3>Binary Data Conversion</h3>
                     <p>
-                        This is a dummy newsletter form so don't bother trying to test it. Not
-                        that I expect you to, anyways. :)
+                        Enter a Binary, Octal, Hexadecimal, or Decimal number and
+                        the other values will be filled in
                     </p>
                 </div>
             
-                <input type="email" id="email" placeholder="brendaneich@js.com" />
+                <input type="text" id="text" placeholder="Enter number to convert" />
                 <button class="btn">Submit</button>
             </section>
             
