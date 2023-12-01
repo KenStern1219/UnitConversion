@@ -53,21 +53,24 @@
                 <p id="resultValue">Result: <input type="text" id="resultValue"></p>
             </div>
 
-            <!-- the following section if for the modal dialog opened by the Binary button -->
+            <!-- the following section is for the modal dialog opened by the Binary button -->
             <section class="modal hidden">
                 <div class="flex">
                     <button class="btn-close">⨉</button>
                 </div>
                 <div>
-                    <h3>Binary Data Conversion</h3>
+                    <h2>Binary Data Conversion</h2>
                     <p>
-                        Enter a Binary, Octal, Hexadecimal, or Decimal number and
+                        Enter a Hexadecimal, Octal, Binary, or Decimal number and
                         the other values will be filled in
                     </p>
                 </div>
             
-                <input type="text" id="text" placeholder="Enter number to convert" />
-                <button class="btn">Submit</button>
+                <input type="text" id="hexNumber" placeholder="Enter Hex Number" />
+                <input type="text" id="octalNumber" placeholder="Enter Octal Number" />
+                <input type="text" id="binaryNumber" placeholder="Enter Binary Number" />
+                <input type="text" id="decimalNumber" placeholder="Enter decimal Number" />
+                <button class="btn">Convert</button>
             </section>
             
             <div class="overlay hidden"></div>

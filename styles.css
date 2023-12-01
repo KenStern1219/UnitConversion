@@ -71,7 +71,7 @@ h1
     top: 35%;
     background-color: white;
     border: 3px solid #0a0909;
-    border-radius: 15px;
+    border-radius: 10px;
     z-index: 2;
 }
 
@@ -79,12 +79,11 @@ h1
 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .modal input 
 {
-    padding: 0.7rem 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 0.9em;
@@ -93,7 +92,7 @@ h1
 .modal p 
 {
     font-size: 0.9rem;
-    color: #777;
+    color: black;
     margin: 0.4rem 0 0.2rem;
 }
 
@@ -107,19 +106,14 @@ button
 .btn 
 {
     display: inline-block;
-    padding: 0.8rem 1.4rem;
+    margin-top: 10px;
+    padding: 10px;
     font-weight: 700;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
+    background-color: gold;
+    color: black;
+    border-radius: 10px;
     text-align: center;
     font-size: 1em;
-}
-
-.btn-open 
-{
-    position: absolute;
-    bottom: 150px;
 }
 
 .btn-close 
@@ -127,7 +121,6 @@ button
     transform: translate(10px, -20px);
     padding: 0.5rem 0.7rem;
     background: #eee;
-    border-radius: 50%;
 }
 
 .overlay 
