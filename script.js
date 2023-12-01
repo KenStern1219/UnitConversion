@@ -24,9 +24,13 @@ document.addEventListener("DOMContentLoaded", function ()
     const pressureButton = document.getElementById("pressure");
     const velocityButton = document.getElementById("velocity");
 
+    const hexValue = document.getElementById("hexNumber");
+    const octalValue = document.getElementById("octalNumber");
+    const binaryValue = document.getElementById("binaryNumber");
+    const decimalValue = document.getElementById("decimalNumber");
+
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".overlay");
-    const openModalBtn = document.querySelector(".btn-open");
     const closeModalBtn = document.querySelector(".btn-close");
 
     const buttons = [lengthButton, areaButton, volumeButton, massButton, timeButton,
@@ -150,6 +154,12 @@ document.addEventListener("DOMContentLoaded", function ()
         console.log("Binary Button Clicked\n\n");
         const units = ["NA"];
         setUpButton(binaryButton, units);
+
+        hexValue.value = "";
+        octalValue.value = "";
+        binaryValue.value = "";
+        decimalValue.value = "";
+
         openModal();
     });
 
