@@ -29,9 +29,11 @@ document.addEventListener("DOMContentLoaded", function ()
     const binaryValue = document.getElementById("binaryNumber");
     const decimalValue = document.getElementById("decimalNumber");
 
+    const converter = document.querySelector(".converter");
+    const result = document.querySelector(".result");
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".overlay");
-    const closeModalBtn = document.querySelector(".btn-close");
+    const closeModalBtn = document.querySelector(".btn-close");``
 
     const buttons = [lengthButton, areaButton, volumeButton, massButton, timeButton,
                      liquidVolumeButton, anglesButton, tempButton, forceButton, energyButton, powerButton, 
@@ -167,6 +169,8 @@ document.addEventListener("DOMContentLoaded", function ()
     {
         modal.classList.remove("hidden");
         overlay.classList.remove("hidden");
+        converter.classList.add("hidden");
+        result.classList.add("hidden");
     };
 
     //
@@ -229,6 +233,15 @@ document.addEventListener("DOMContentLoaded", function ()
         //
         resetButtonBackground();
         aButton.style.backgroundColor = "green";
+
+        //
+        // Unhide the converter and result divs (if they are hidden)
+        //
+        if (result.classList.contains("hidden") && converter.classList.contains("hidden"))
+        {
+            converter.classList.remove("hidden");
+            result.classList.remove("hidden");
+        }
 
         //
         // Clear out any previous result
