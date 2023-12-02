@@ -83,7 +83,6 @@ h2
     border: 3px solid #0a0909;
     border-radius: 10px;
     z-index: 2;
-
 }
 
 .modal .flex 
@@ -133,6 +132,9 @@ button
 {
     border: 0;
     color: red;
+    font-weight: bold;
+    outline: none;
+    pointer-events: none;
 }
 
 .btn-close 

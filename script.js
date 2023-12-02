@@ -254,8 +254,10 @@ document.addEventListener("DOMContentLoaded", function ()
         //
         inputValue.value = "1";
 
-
-        errorMessage.textContent = "Error";
+        //
+        // Initialize the Binary document error message
+        //
+        errorMessage.value = "Error";
 
         //
         // Populate the drop down boxes with the appropriate units
