@@ -75,11 +75,15 @@ h2
     padding: 1.3rem;
     min-height: 250px;
     position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     top: 35%;
     background-color: white;
     border: 3px solid #0a0909;
     border-radius: 10px;
     z-index: 2;
+
 }
 
 .modal .flex 
@@ -126,7 +130,7 @@ button
 .btn-close 
 {
     transform: translate(10px, -20px);
-    padding: 0.5rem 0.7rem;
+    padding: 0.5rem 0.7rem; 
     background: #eee;
 }
 
