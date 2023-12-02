@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function ()
     const octalValue = document.getElementById("octalNumber");
     const binaryValue = document.getElementById("binaryNumber");
     const decimalValue = document.getElementById("decimalNumber");
+    const errorMessage = document.getElementById("errorMessage");
 
     const converter = document.querySelector(".converter");
     const result = document.querySelector(".result");
@@ -252,6 +253,9 @@ document.addEventListener("DOMContentLoaded", function ()
         // Reset input to 1
         //
         inputValue.value = "1";
+
+
+        errorMessage.textContent = "Error";
 
         //
         // Populate the drop down boxes with the appropriate units
