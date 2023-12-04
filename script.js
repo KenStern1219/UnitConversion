@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function ()
     const result = document.querySelector(".result");
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".overlay");
-    const closeModalBtn = document.querySelector(".btn-close");``
+    const closeModalBtn = document.querySelector(".btn-close");
+    const binaryConvertButton = document.querySelector(".binaryConvertButton");
 
     const buttons = [lengthButton, areaButton, volumeButton, massButton, timeButton,
                      liquidVolumeButton, anglesButton, tempButton, forceButton, energyButton, powerButton, 
@@ -205,7 +206,23 @@ document.addEventListener("DOMContentLoaded", function ()
         overlay.classList.add("hidden");
     };
 
-   timeButton.addEventListener("click", () =>
+    //
+    // The following is just for test. Eventually we need
+    // to dectect with field has a value (and that only ONE
+    // field has a value), and populate all the other fields
+    //
+    binaryConvertButton.addEventListener("click", () =>
+    {
+        console.log("Convert Button Clicked\n\n");
+        const decimal = decimalValue.value;
+        const decimalNumber = Number(decimal);
+        hexValue.value = "Hex: " + decimalNumber.toString(16);
+        octalValue.value = "Oct: " + decimalNumber.toString(8);
+        binaryValue.value = "Bin: " + decimalNumber.toString(2);
+        decimalValue.value = "Dec: " + decimalNumber.toString(10);
+    });
+
+    timeButton.addEventListener("click", () =>
     {
         console.log("Time Button Clicked\n\n");
         const units = ["second", "minute", "hour", "day", "week", "month", "year", "decade", "century"];
@@ -257,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function ()
         //
         // Initialize the Binary document error message
         //
-        errorMessage.value = "Error";
+        errorMessage.value = "Error: None";
 
         //
         // Populate the drop down boxes with the appropriate units

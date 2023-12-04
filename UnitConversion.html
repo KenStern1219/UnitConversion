@@ -58,11 +58,14 @@
                 <div class="flex">
                     <button class="btn-close">⨉</button>
                 </div>
+
                 <div>
                     <h2>Binary Data Conversion</h2>
                     <p>
                         Enter a Hexadecimal, Octal, Binary, or Decimal number and
-                        the other values will be filled in
+                        the other values will be filled in. Note that Hex numbers
+                        must start with "0x", Binary numbers must start with "0b",
+                        and Octal numbers must start with "0o".
                     </p>
                 </div>
             
@@ -70,8 +73,9 @@
                 <input type="text" id="octalNumber" placeholder="Enter Octal Number" />
                 <input type="text" id="binaryNumber" placeholder="Enter Binary Number" />
                 <input type="text" id="decimalNumber" placeholder="Enter decimal Number" />
-                <button class="btn">Convert</button>
-                <input type="text" id="errorMessage" readonly/>
+
+                <button class="binaryConvertButton">Convert</button>
+                <input type="text" id="errorMessage" readonly />
             </section>
             
             <div class="overlay hidden"></div>

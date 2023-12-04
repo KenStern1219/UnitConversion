@@ -146,6 +146,19 @@ button
     background: #eee;
 }
 
+.binaryConvertButton
+{
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px;
+        font-weight: 700;
+        background-color: gold;
+        color: black;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+    
 .overlay 
 {
     position: fixed;
