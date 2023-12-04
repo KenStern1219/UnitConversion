@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function ()
     const binaryValue = document.getElementById("binaryNumber");
     const decimalValue = document.getElementById("decimalNumber");
     const errorMessage = document.getElementById("errorMessage");
+    const inputValueToConvert = document.getElementById("inputValueToConvert");
 
     const converter = document.querySelector(".converter");
     const result = document.querySelector(".result");
@@ -163,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function ()
         octalValue.value = "";
         binaryValue.value = "";
         decimalValue.value = "";
+        inputValueToConvert.value = "";
 
         openModal();
     });
@@ -214,12 +216,12 @@ document.addEventListener("DOMContentLoaded", function ()
     binaryConvertButton.addEventListener("click", () =>
     {
         console.log("Convert Button Clicked\n\n");
-        const decimal = decimalValue.value;
+        const decimal = inputValueToConvert.value;
         const decimalNumber = Number(decimal);
-        hexValue.value = "Hex: " + decimalNumber.toString(16);
-        octalValue.value = "Oct: " + decimalNumber.toString(8);
-        binaryValue.value = "Bin: " + decimalNumber.toString(2);
-        decimalValue.value = "Dec: " + decimalNumber.toString(10);
+        hexValue.value = decimalNumber.toString(16);
+        octalValue.value = decimalNumber.toString(8);
+        binaryValue.value = decimalNumber.toString(2);
+        decimalValue.value = decimalNumber.toString(10);
     });
 
     timeButton.addEventListener("click", () =>

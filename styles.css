@@ -85,6 +85,16 @@ h2
     z-index: 2;
 }
 
+#inputValueToConvert
+{
+    background-color: aqua;
+}
+
+.modal .binary {
+    display: flex;
+    flex-direction: column;
+}
+
 .modal .flex 
 {
     display: flex;
@@ -134,6 +144,34 @@ button
     border: 0;
     color: red;
     font-weight: bold;
+    outline: none;
+    pointer-events: none;
+}
+
+#hexNumber
+{
+    border: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+#octalNumber
+{
+    border: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+#binaryNumber
+{
+    border: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+#decimalNumber
+{
+    border: 0;
     outline: none;
     pointer-events: none;
 }
