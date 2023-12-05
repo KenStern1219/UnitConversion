@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function ()
         {
             closeModal();
         }
-        else if (e.key === "Enter")
+        else if (e.key === "Enter" && !modal.classList.contains("hidden"))
         {
             doBinaryConversion();
         }
