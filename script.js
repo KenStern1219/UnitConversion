@@ -193,6 +193,9 @@ document.addEventListener("DOMContentLoaded", function ()
         closeModal();
     });
 
+    //
+    // Exit dialog on Escape and trigger a convert on Enter
+    //
     document.addEventListener("keydown", function (e)
     {
         if (e.key === "Escape" && !modal.classList.contains("hidden"))
