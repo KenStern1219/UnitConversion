@@ -90,7 +90,7 @@ function getPlural(aUnitName)
     else if (aUnitName.includes("speed of light")) plural = "c";
     else if (aUnitName.includes("per")) plural = aUnitName;
 
-    else if (aUnitName === "BTU/hr") plural = aUnitName;
+    else if (aUnitName === "BTU/hr") plural = aUnitName
 
     else if ((aUnitName === "bits") || (aUnitName === "bytes")) plural = aUnitName;
 

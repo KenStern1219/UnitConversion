@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function ()
     const octalValue = document.getElementById("octalNumber");
     const binaryValue = document.getElementById("binaryNumber");
     const decimalValue = document.getElementById("decimalNumber");
-    const errorMessage = document.getElementById("errorMessage");
     const inputValueToConvert = document.getElementById("inputValueToConvert");
 
     const converter = document.querySelector(".converter");
@@ -200,6 +199,10 @@ document.addEventListener("DOMContentLoaded", function ()
         {
             closeModal();
         }
+        else if (e.key === "Enter")
+        {
+            doBinaryConversion();
+        }
     });
 
     const closeModal = function ()
@@ -208,21 +211,21 @@ document.addEventListener("DOMContentLoaded", function ()
         overlay.classList.add("hidden");
     };
 
-    //
-    // The following is just for test. Eventually we need
-    // to dectect with field has a value (and that only ONE
-    // field has a value), and populate all the other fields
-    //
     binaryConvertButton.addEventListener("click", () =>
     {
-        console.log("Convert Button Clicked\n\n");
-        const decimal = inputValueToConvert.value;
-        const decimalNumber = Number(decimal);
-        hexValue.value = decimalNumber.toString(16);
-        octalValue.value = decimalNumber.toString(8);
-        binaryValue.value = decimalNumber.toString(2);
-        decimalValue.value = decimalNumber.toString(10);
+        doBinaryConversion();
     });
+    
+    function doBinaryConversion()
+    {
+        console.log("Convert Button Clicked\n\n");
+        const value = inputValueToConvert.value;
+        const valueNumber = Number(value);
+        hexValue.value = valueNumber.toString(16);
+        octalValue.value = valueNumber.toString(8);
+        binaryValue.value = valueNumber.toString(2);
+        decimalValue.value = valueNumber.toString(10);
+    }
 
     timeButton.addEventListener("click", () =>
     {
@@ -272,11 +275,6 @@ document.addEventListener("DOMContentLoaded", function ()
         // Reset input to 1
         //
         inputValue.value = "1";
-
-        //
-        // Initialize the Binary document error message
-        //
-        errorMessage.value = "Error: None";
 
         //
         // Populate the drop down boxes with the appropriate units

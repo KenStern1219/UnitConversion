@@ -119,6 +119,11 @@ h2
     margin: 0.4rem 0 0.2rem;
 }
 
+.modal span
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 button 
 {
     cursor: pointer;
@@ -139,41 +144,19 @@ button
     font-size: 1em;
 }
 
-#errorMessage
+.binary input
 {
     border: 0;
-    color: red;
-    font-weight: bold;
     outline: none;
     pointer-events: none;
+    width: 385px
 }
 
 #hexNumber
 {
-    border: 0;
-    outline: none;
-    pointer-events: none;
-}
-
-#octalNumber
-{
-    border: 0;
-    outline: none;
-    pointer-events: none;
-}
-
-#binaryNumber
-{
-    border: 0;
-    outline: none;
-    pointer-events: none;
-}
-
-#decimalNumber
-{
-    border: 0;
-    outline: none;
-    pointer-events: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
 }
 
 .btn-close 
