@@ -149,12 +149,38 @@ document.addEventListener("DOMContentLoaded", function ()
     });
 
     //
+    // For binary conversions ... if the input is hex or decimal
+    // break the binary string into 4 digit segments so it is easier
+    // to read. If the input is octal break the binary string into
+    // 3 digit segments
+    //
+    //////////////////////////////////////////
+    //
+    // First, we need a funtion to insert spaces into
+    // a string
+    //
+    String.prototype.insertString = function(index, string)
+        {
+            if (index > 0)
+            {
+                return this.substring(0, index) + string + this.substring(index, this.length);
+            }
+        }
+
+    //
     // The Binary button opens a modal dialog to
     // allow entry of the binary, decimal, octal,
     // or hex number
     //
     binaryButton.addEventListener("click", () =>
     {
+        //
+        // Just for testing
+        //
+        var someString = "How you?";
+        someString = someString.insertString(3, " are");
+        console.log(someString);
+
         console.log("Binary Button Clicked\n\n");
         const units = ["NA"];
         setUpButton(binaryButton, units);
