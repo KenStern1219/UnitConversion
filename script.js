@@ -174,13 +174,6 @@ document.addEventListener("DOMContentLoaded", function ()
     //
     binaryButton.addEventListener("click", () =>
     {
-        //
-        // Just for testing
-        //
-        var someString = "How you?";
-        someString = someString.insertString(3, " are");
-        console.log(someString);
-
         console.log("Binary Button Clicked\n\n");
         const units = ["NA"];
         setUpButton(binaryButton, units);
@@ -254,6 +247,69 @@ document.addEventListener("DOMContentLoaded", function ()
         octalValue.value = valueNumber.toString(8);
         binaryValue.value = valueNumber.toString(2);
         decimalValue.value = valueNumber.toString(10);
+
+        //
+        // Is the input value decimal (dosn't start with 0x, 0b, or 0o) or hex (starts with 0x)
+        //
+        var valueIsHex = false;
+        var valueIsOct = false;
+        var valueIsBin = false;
+        var valueIsDec = false;
+        if (value.includes("0x"))
+        {
+            valueIsHex = true;
+        }
+        else if (value.includes("0o"))
+        {
+            valueIsOct = true;
+        }
+        else if (value.includes("0b"))
+        {
+            valueIsBin = true;
+        }
+        else
+        {
+            valueIsDec = true;
+        }
+
+        var numBreaks;
+        var binaryStringLength;
+        if (valueIsDec || valueIsHex)
+        {
+            //
+            // Break binary string every 4 characters
+            //
+            numBreaks = Math.floor(binaryValue.value.length / 4);
+            //
+            // if there is no remainder then decrease the number
+            // of spaces to add by 1
+            //
+            if ((binaryValue.value.length % 4) == 0) numBreaks--;
+
+            binaryStringLength = binaryValue.value.length;
+            for (var i = 1; i <= numBreaks; i++, binaryStringLength -= 4)
+            {
+                binaryValue.value = binaryValue.value.insertString(binaryStringLength - 4, " ");
+            }
+        }
+        else if (valueIsOct)
+        {
+            //
+            // Break binary string every 3 characters
+            //
+            numBreaks = Math.floor(binaryValue.value.length / 3);
+            //
+            // if there is no remainder then decrease the number
+            // of spaces to add by 1
+            //
+            if ((binaryValue.value.length % 3) == 0) numBreaks--;
+
+            binaryStringLength = binaryValue.value.length;
+            for (var i = 1; i <= numBreaks; i++, binaryStringLength -= 3)
+            {
+                binaryValue.value = binaryValue.value.insertString(binaryStringLength - 3, " ");
+            }
+        }
     }
 
     timeButton.addEventListener("click", () =>
