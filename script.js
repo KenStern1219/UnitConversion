@@ -159,6 +159,12 @@ document.addEventListener("DOMContentLoaded", function ()
     // First, we need a funtion to insert spaces into
     // a string
     //
+    //////////////////////////////////////////
+    //
+    // [I THINK that what is happing here with 'prototype' is that I am basically
+    //  adding a new method ('insertString') to the 'String' class. As best I can
+    //  tell that's not EXACTLY what is happening but it appears like it.]
+    //
     String.prototype.insertString = function(index, string)
         {
             if (index > 0)
@@ -290,9 +296,6 @@ document.addEventListener("DOMContentLoaded", function ()
 
     function fixBinaryString(blockSize)
     {
-        // var numBreaks;
-        // var binaryStringLength;
-
         //
         // Break binary string every 'blockSize' characters
         //
