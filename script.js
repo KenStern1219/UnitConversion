@@ -272,43 +272,41 @@ document.addEventListener("DOMContentLoaded", function ()
             valueIsDec = true;
         }
 
-        var numBreaks;
-        var binaryStringLength;
         if (valueIsDec || valueIsHex)
         {
             //
             // Break binary string every 4 characters
             //
-            numBreaks = Math.floor(binaryValue.value.length / 4);
-            //
-            // if there is no remainder then decrease the number
-            // of spaces to add by 1
-            //
-            if ((binaryValue.value.length % 4) == 0) numBreaks--;
-
-            binaryStringLength = binaryValue.value.length;
-            for (var i = 1; i <= numBreaks; i++, binaryStringLength -= 4)
-            {
-                binaryValue.value = binaryValue.value.insertString(binaryStringLength - 4, " ");
-            }
+            fixBinaryString(4);
         }
         else if (valueIsOct)
         {
             //
             // Break binary string every 3 characters
             //
-            numBreaks = Math.floor(binaryValue.value.length / 3);
-            //
-            // if there is no remainder then decrease the number
-            // of spaces to add by 1
-            //
-            if ((binaryValue.value.length % 3) == 0) numBreaks--;
+            fixBinaryString(3);
+        }
+    }
 
-            binaryStringLength = binaryValue.value.length;
-            for (var i = 1; i <= numBreaks; i++, binaryStringLength -= 3)
-            {
-                binaryValue.value = binaryValue.value.insertString(binaryStringLength - 3, " ");
-            }
+    function fixBinaryString(blockSize)
+    {
+        // var numBreaks;
+        // var binaryStringLength;
+
+        //
+        // Break binary string every 'blockSize' characters
+        //
+        var numBreaks = Math.floor(binaryValue.value.length / blockSize);
+        //
+        // if there is no remainder then decrease the number
+        // of space characters to add by 1
+        //
+        if ((binaryValue.value.length % blockSize) == 0) numBreaks--;
+
+        var binaryStringLength = binaryValue.value.length;
+        for (var i = 1; i <= numBreaks; i++, binaryStringLength -= blockSize)
+        {
+            binaryValue.value = binaryValue.value.insertString(binaryStringLength - blockSize, " ");
         }
     }
 
