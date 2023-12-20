@@ -380,15 +380,6 @@ document.addEventListener("DOMContentLoaded", function ()
     
     convertButton.addEventListener("click", function () 
     {
-        //
-        // Haven't implemented the BINARY button yet
-        //
-        if (fromUnit.value === "NA")
-        {
-            resultValue.textContent = "Result: Not Implemented";
-            return
-        }
-
         const input = parseFloat(inputValue.value);
         const from = fromUnit.value;
         const to = toUnit.value;
